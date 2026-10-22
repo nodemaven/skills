@@ -1,0 +1,21 @@
+{
+  "name": "nodemaven",
+  "owner": {
+    "name": "NodeMaven",
+    "url": "https://nodemaven.com"
+  },
+  "metadata": {
+    "description": "NodeMaven skills and MCP server for Claude Code: residential proxies, SDKs, account API, Google SERP scraping and proxy benchmarking.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "nodemaven",
+      "source": "./plugins/nodemaven",
+      "description": "Residential proxy setup, SDKs, account API, Google SERP scraping, proxy benchmarking and troubleshooting, plus a read-only MCP server.",
+      "version": "0.1.0",
+      "category": "development",
+      "keywords": ["proxy", "web-scraping", "serp", "mcp"]
+    }
+  ]
+}
