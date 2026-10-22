@@ -1,5 +1,5 @@
 ---
 type: regex
-pattern: '\.Sessions\(\s*50\s*\)'
+pattern: '\.Sessions\('
 target: last_message
 ---

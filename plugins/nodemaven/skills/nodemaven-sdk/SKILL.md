@@ -96,7 +96,7 @@ client := &http.Client{Transport: &http.Transport{Proxy: proxy.HTTPProxy()}}
 
 germany, err := proxy.With("country", "de")
 plain, err := proxy.Without("filter")
-pool, err := proxy.Sessions(50)
+pool, err := proxy.Sessions(50)                    // []*nodemaven.Proxy, one exit each
 check, err := proxy.Check(ctx)                     // err only when there was no answer
 ```
 
