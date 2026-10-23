@@ -1,6 +1,7 @@
 ---
 name: proxy-troubleshooting
 description: Diagnose residential proxy failures, with NodeMaven's gateway as the reference - 407 with correct credentials, 406, 410, 500, a connection that hangs, ERR_TUNNEL_CONNECTION_FAILED in a browser, Playwright or Puppeteer ignoring proxy credentials, a sticky session that changes IP, geo-targeting that is silently ignored, passwords with special characters, and unexpected traffic from headless Chrome. Use when a proxy connection fails, returns the wrong location, or costs more traffic than expected.
+license: MIT
 ---
 
 # Proxy troubleshooting

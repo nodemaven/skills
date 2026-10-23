@@ -1,6 +1,7 @@
 ---
 name: nodemaven-proxy
 description: Connect code to NodeMaven residential proxies. Covers the gateway address, the username format for country, region, city and ISP targeting, sticky sessions with ttl, the IP quality filter, rotation, and ready-to-paste setup for Python requests, httpx, aiohttp, curl, Node (undici, axios), Playwright, Puppeteer, Selenium and Scrapy. Use when the user wants to send traffic through NodeMaven, target a location, keep one IP across requests, or rotate IPs.
+license: MIT
 ---
 
 # NodeMaven proxies

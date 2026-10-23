@@ -6,6 +6,14 @@ around them, plus the read-only NodeMaven MCP server.
 
 ## Install
 
+In Claude Code 2.1.275 or later:
+
+```
+/plugin install nodemaven --marketplace nodemaven/skills
+```
+
+On earlier versions:
+
 ```
 /plugin marketplace add nodemaven/skills
 /plugin install nodemaven@nodemaven
@@ -31,7 +39,7 @@ name, e.g. `/nodemaven:nodemaven-proxy`.
 ## MCP server
 
 The plugin starts [`nodemaven-mcp`](https://github.com/nodemaven/nodemaven-mcp)
-with `uvx`, so [uv](https://docs.astral.sh/uv/) has to be installed. Its tools
+0.1.0 with `uvx nodemaven-mcp==0.1.0`, so [uv](https://docs.astral.sh/uv/) has to be installed. Its tools
 are read-only: `proxy_url`, `check_proxy`, `list_locations`, `account_status`,
 `traffic_stats`, `top_domains`, `list_sub_users`. Proxy passwords are kept out of
 tool results.

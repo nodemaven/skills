@@ -1,6 +1,7 @@
 ---
 name: google-browser-scraper
 description: Scrape Google search results (SERP) to JSON with google-browser-scraper - a real Chrome browser on a residential proxy with sticky sessions. Run it as a CLI, a Python library, a local SerpApi-style HTTP API (`serve`), an MCP server, or a Docker image; set workers, pages, cost tracking and NodeMaven credentials. Use when the user wants Google results, rank tracking, a self-hosted SERP API, or live Google search for an AI agent.
+license: MIT
 ---
 
 # google-browser-scraper

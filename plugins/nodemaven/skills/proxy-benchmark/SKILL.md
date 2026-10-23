@@ -1,6 +1,7 @@
 ---
 name: proxy-benchmark
 description: Measure proxies and scraping browsers with the open-source proxy-benchmark harness - success rate on real targets (Google, Bing, DuckDuckGo, Amazon), bytes per page, exit yield, and side-by-side comparison of providers or automation engines (Playwright, Patchright, Camoufox, zendriver, SeleniumBase and others). Use when the user wants to test or compare proxy providers, check which browser gets past a target, estimate traffic cost, or reproduce a published number.
+license: MIT
 ---
 
 # proxy-benchmark

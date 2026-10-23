@@ -1,6 +1,7 @@
 ---
 name: nodemaven-sdk
 description: Write code with the official NodeMaven SDKs - `nodemaven` for Python (PyPI), Rust (crates.io) and Go (github.com/nodemaven/nodemaven-go). Build validated proxy usernames and URLs, sticky sessions, per-worker session pools, check a proxy with one CONNECT, and call the account API client. Use when the user's project is in Python, Rust or Go and needs NodeMaven proxies or account data, or asks which SDK call does something.
+license: MIT
 ---
 
 # NodeMaven SDKs

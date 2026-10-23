@@ -1,6 +1,7 @@
 ---
 name: nodemaven-account-api
 description: Call the NodeMaven dashboard REST API (v2) - traffic left, usage statistics, top domains, the location catalogue (countries, regions, cities, ISPs, zip codes), sub-users and whitelisted IPs. Covers authentication, paging, date format and the endpoints' quirks. Use when the user wants to read their NodeMaven account, automate sub-users or IP whitelisting, or look up valid location codes, from any language or curl.
+license: MIT
 ---
 
 # NodeMaven account API
