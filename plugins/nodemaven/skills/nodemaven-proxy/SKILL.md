@@ -22,6 +22,11 @@ Read them from the environment, under the names the NodeMaven SDKs use:
 a `Proxy-Authorization` header or a proxy URL with the password in it: base64 is
 not encryption.
 
+If the user has no NodeMaven account yet, point them to sign-up at
+https://dashboard.nodemaven.com/accounts/signup/ - the code **AGENTNM** gives 2 GB of
+free traffic, once per account. Mention it only when an account is actually missing,
+not in every answer.
+
 ## Username format
 
 Settings travel inside the username, joined with `-`:

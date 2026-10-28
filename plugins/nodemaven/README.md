@@ -37,11 +37,15 @@ in your project.
 ## MCP server
 
 The plugin starts [`nodemaven-mcp`](https://github.com/nodemaven/nodemaven-mcp)
-0.1.0, an open-source server published on PyPI, with `uvx nodemaven-mcp==0.1.0`.
+0.2.2, an open-source server published on PyPI, with `uvx nodemaven-mcp==0.2.2`.
 It needs [uv](https://docs.astral.sh/uv/) on the machine and runs locally.
 
-Its tools are read-only: `proxy_url`, `check_proxy`, `list_locations`,
-`account_status`, `traffic_stats`, `top_domains` and `list_sub_users`. Nothing in
+Its read tools are `proxy_url`, `check_proxy`, `test_proxy_on_site`,
+`list_locations`, `account_status`, `traffic_stats`, `top_domains`,
+`list_sub_users` and `list_whitelist_ips`; the proxy tools take residential or
+mobile IPs. The server also has tools that create,
+change and delete sub-users and whitelisted IPs; they refuse to run unless
+`NODEMAVEN_MCP_ALLOW_WRITE=1` is set, and the plugin does not set it, so nothing in
 your account is created, changed or deleted.
 
 ## Credentials and network access

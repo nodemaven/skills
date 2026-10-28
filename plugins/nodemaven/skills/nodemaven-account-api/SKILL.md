@@ -90,6 +90,8 @@ curl -s --max-redirs 0 -X POST -H "Authorization: x-api-key $NODEMAVEN_APIKEY" \
   https://dashboard.nodemaven.com/api/v2/base/whitelist/ip/upsert
 ```
 
-For read-only access from an AI client, the `nodemaven-mcp` server exposes
-`account_status`, `traffic_stats`, `top_domains`, `list_locations` and
-`list_sub_users`, with passwords removed from every result.
+From an AI client, the `nodemaven-mcp` server exposes `account_status`,
+`traffic_stats`, `top_domains`, `list_locations`, `list_sub_users` and
+`list_whitelist_ips`, with passwords removed from every result. Its sub-user and
+whitelist write tools work only when the server runs with
+`NODEMAVEN_MCP_ALLOW_WRITE=1`.
