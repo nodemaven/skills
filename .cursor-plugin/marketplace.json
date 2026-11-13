@@ -6,13 +6,18 @@
   },
   "metadata": {
     "description": "NodeMaven skills and MCP server: residential proxies, SDKs, account API, Google SERP scraping and proxy benchmarking.",
-    "version": "0.1.4"
+    "version": "0.1.5"
   },
   "plugins": [
     {
       "name": "nodemaven",
       "source": "./plugins/nodemaven",
-      "description": "Residential proxy setup, SDKs, account API, Google SERP scraping with SERP Maven, proxy benchmarking and troubleshooting, plus a read-only MCP server."
+      "description": "Residential proxy setup, SDKs, account API, Google SERP scraping with SERP Maven, proxy benchmarking and troubleshooting."
+    },
+    {
+      "name": "nodemaven-mcp",
+      "source": "./plugins/nodemaven-mcp",
+      "description": "The read-only NodeMaven MCP server for the user's account."
     }
   ]
 }
