@@ -1,5 +1,5 @@
 ---
 type: regex
-pattern: 'google-browser-scraper serve'
+pattern: 'serpmaven serve'
 target: last_message
 ---

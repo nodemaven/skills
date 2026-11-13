@@ -1,7 +1,7 @@
 {
   "name": "nodemaven",
   "displayName": "NodeMaven",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Residential proxies for scraping and automation: proxy setup and geo-targeting, the Python, Rust and Go SDKs, the account API, Google SERP scraping, proxy benchmarking and troubleshooting, plus a read-only MCP server for the account.",
   "author": {
     "name": "NodeMaven",
@@ -38,9 +38,14 @@
   },
   "mcpServers": {
     "nodemaven": {
-      "command": "uvx",
+      "command": "uv",
       "args": [
-        "nodemaven-mcp==0.2.2"
+        "run",
+        "--project",
+        "${CLAUDE_PLUGIN_ROOT}",
+        "--locked",
+        "--quiet",
+        "nodemaven-mcp"
       ],
       "env": {
         "NODEMAVEN_APIKEY": "${user_config.api_key}"

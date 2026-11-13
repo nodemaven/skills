@@ -24,6 +24,9 @@ On earlier versions:
 Claude Code asks for an optional NodeMaven API key when the plugin is enabled. It is used only
 by the MCP server, and is stored as a sensitive value.
 
+The same plugin works in Cursor: its manifest is in `.cursor-plugin/`, and the MCP server
+reads the API key from `NODEMAVEN_APIKEY` in the environment Cursor starts in.
+
 > [!TIP]
 > 🎁 **2 GB of free traffic.** No account yet? [Sign up](https://dashboard.nodemaven.com/accounts/signup/?utm_source=github&utm_medium=readme&utm_campaign=skills&utm_content=signup_promo) and enter the code **GITHUB**. Once per account.
 
@@ -34,7 +37,7 @@ by the MCP server, and is stored as a sensitive value.
 | `nodemaven-proxy` | connect code to the gateway: username format, geo-targeting, sticky sessions, rotation, setup for requests, httpx, aiohttp, curl, Node, Playwright, Puppeteer, Selenium, Scrapy |
 | `nodemaven-sdk` | write code with the Python, Rust and Go SDKs: validated proxy URLs, session pools, `check()`, the API client |
 | `nodemaven-account-api` | call the dashboard REST API: traffic, statistics, locations, sub-users, IP whitelist, and the quirks generated clients get wrong |
-| `google-browser-scraper` | scrape Google results to JSON with a real browser: CLI, Python, local HTTP API, MCP server, Docker |
+| `serpmaven` | scrape Google results to JSON with a real browser (SERP Maven): CLI, Python, local HTTP API, MCP server, Docker |
 | `proxy-benchmark` | measure and compare proxy providers and scraping browsers with the open-source harness |
 | `proxy-troubleshooting` | diagnose 407, 406, 410 and 500 answers, hangs, Playwright and Chrome proxy auth, sticky sessions that move, traffic from idle Chrome |
 
@@ -44,7 +47,8 @@ name, e.g. `/nodemaven:nodemaven-proxy`.
 ## MCP server
 
 The plugin starts [`nodemaven-mcp`](https://github.com/nodemaven/nodemaven-mcp)
-0.2.2 with `uvx nodemaven-mcp==0.2.2`, so [uv](https://docs.astral.sh/uv/) has to be installed. Its
+0.2.3 from a locked environment (`pyproject.toml` and `uv.lock` in the plugin, run with
+`uv run --locked`), so [uv](https://docs.astral.sh/uv/) has to be installed. Its
 read tools are `proxy_url`, `check_proxy`, `test_proxy_on_site`, `list_locations`,
 `account_status`, `traffic_stats`, `top_domains`, `list_sub_users` and
 `list_whitelist_ips`; the proxy tools take residential or mobile IPs. Its tools for sub-users and whitelisted IPs change the account
@@ -69,7 +73,7 @@ Results go to `evals/results/`, which is not committed.
   [nodemaven-rust](https://github.com/nodemaven/nodemaven-rust),
   [nodemaven-go](https://github.com/nodemaven/nodemaven-go)
 - [nodemaven-mcp](https://github.com/nodemaven/nodemaven-mcp)
-- [google-browser-scraper](https://github.com/nodemaven/google-browser-scraper)
+- [SERP Maven](https://github.com/nodemaven/serpmaven)
 - [proxy-benchmark](https://github.com/nodemaven/proxy-benchmark)
 
 ## License
