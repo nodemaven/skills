@@ -28,6 +28,7 @@ when it is enabled; it is used only by the MCP server and stored as a sensitive 
 Live Google search for the agent is a third plugin, `/plugin install serpmaven@nodemaven`. It
 starts the [SERP Maven](https://github.com/nodemaven/serpmaven) MCP server and uses the proxy
 login saved once with `uvx serpmaven login`; `uvx serpmaven install` downloads its browser.
+Both need [uv](https://docs.astral.sh/uv/).
 
 All three plugins work in Cursor too (`.cursor-plugin/`); there the NodeMaven MCP server reads
 the API key from `NODEMAVEN_APIKEY` in the environment Cursor starts in.
