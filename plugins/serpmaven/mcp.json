@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "serpmaven": {
+      "command": "uvx",
+      "args": ["serpmaven==0.2.3", "mcp", "--prewarm"]
+    }
+  }
+}

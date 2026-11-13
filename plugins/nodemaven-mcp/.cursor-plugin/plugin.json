@@ -1,7 +1,7 @@
 {
   "name": "nodemaven-mcp",
   "displayName": "NodeMaven MCP",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "The read-only NodeMaven MCP server: geo-targeted proxy URLs, proxy checks and site tests, locations, traffic and statistics from the user's account.",
   "author": {
     "name": "NodeMaven",

@@ -4,7 +4,7 @@
 
 A Claude Code plugin that teaches Claude to work with
 [NodeMaven](https://nodemaven.com) residential proxies and the open-source tools
-around them, plus the read-only NodeMaven MCP server.
+around them, plus the read-only NodeMaven MCP server and the SERP Maven search server.
 
 ## Install
 
@@ -25,8 +25,12 @@ The read-only MCP server for the account is a second plugin in the same marketpl
 `/plugin install nodemaven-mcp@nodemaven`. Claude Code asks for an optional NodeMaven API key
 when it is enabled; it is used only by the MCP server and stored as a sensitive value.
 
-Both plugins work in Cursor too (`.cursor-plugin/`); there the MCP server reads the API key from
-`NODEMAVEN_APIKEY` in the environment Cursor starts in.
+Live Google search for the agent is a third plugin, `/plugin install serpmaven@nodemaven`. It
+starts the [SERP Maven](https://github.com/nodemaven/serpmaven) MCP server and uses the proxy
+login saved once with `uvx serpmaven login`; `uvx serpmaven install` downloads its browser.
+
+All three plugins work in Cursor too (`.cursor-plugin/`); there the NodeMaven MCP server reads
+the API key from `NODEMAVEN_APIKEY` in the environment Cursor starts in.
 
 > [!TIP]
 > 🎁 **2 GB of free traffic.** No account yet? [Sign up](https://dashboard.nodemaven.com/accounts/signup/?utm_source=github&utm_medium=readme&utm_campaign=skills&utm_content=signup_promo) and enter the code **GITHUB**. Once per account.

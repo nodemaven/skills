@@ -1,0 +1,20 @@
+{
+  "name": "serpmaven",
+  "displayName": "SERP Maven",
+  "version": "0.1.6",
+  "description": "Live Google search for the agent: SERP Maven runs a real Chrome browser on your residential proxy and returns results, People also ask, related searches and the AI Overview as structured data.",
+  "author": {
+    "name": "NodeMaven",
+    "email": "alexandr.kazmin@nodemaven.com"
+  },
+  "homepage": "https://github.com/nodemaven/serpmaven",
+  "repository": "https://github.com/nodemaven/skills",
+  "license": "MIT",
+  "keywords": [
+    "google-search",
+    "serp",
+    "mcp",
+    "web-search"
+  ],
+  "logo": "assets/icon.png"
+}
