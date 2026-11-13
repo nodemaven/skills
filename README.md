@@ -21,11 +21,12 @@ On earlier versions:
 /plugin install nodemaven@nodemaven
 ```
 
-Claude Code asks for an optional NodeMaven API key when the plugin is enabled. It is used only
-by the MCP server, and is stored as a sensitive value.
+The read-only MCP server for the account is a second plugin in the same marketplace:
+`/plugin install nodemaven-mcp@nodemaven`. Claude Code asks for an optional NodeMaven API key
+when it is enabled; it is used only by the MCP server and stored as a sensitive value.
 
-The same plugin works in Cursor: its manifest is in `.cursor-plugin/`, and the MCP server
-reads the API key from `NODEMAVEN_APIKEY` in the environment Cursor starts in.
+Both plugins work in Cursor too (`.cursor-plugin/`); there the MCP server reads the API key from
+`NODEMAVEN_APIKEY` in the environment Cursor starts in.
 
 > [!TIP]
 > 🎁 **2 GB of free traffic.** No account yet? [Sign up](https://dashboard.nodemaven.com/accounts/signup/?utm_source=github&utm_medium=readme&utm_campaign=skills&utm_content=signup_promo) and enter the code **GITHUB**. Once per account.
@@ -46,14 +47,14 @@ name, e.g. `/nodemaven:nodemaven-proxy`.
 
 ## MCP server
 
-The plugin starts [`nodemaven-mcp`](https://github.com/nodemaven/nodemaven-mcp)
-0.2.3 from a locked environment (`pyproject.toml` and `uv.lock` in the plugin, run with
-`uv run --locked`), so [uv](https://docs.astral.sh/uv/) has to be installed. Its
-read tools are `proxy_url`, `check_proxy`, `test_proxy_on_site`, `list_locations`,
-`account_status`, `traffic_stats`, `top_domains`, `list_sub_users` and
-`list_whitelist_ips`; the proxy tools take residential or mobile IPs. Its tools for sub-users and whitelisted IPs change the account
-and stay off: the plugin does not set `NODEMAVEN_MCP_ALLOW_WRITE`. Proxy passwords
-are kept out of tool results.
+The NodeMaven MCP server is a separate plugin in this marketplace, `nodemaven-mcp`, so this
+one is skills only. It starts [`nodemaven-mcp`](https://github.com/nodemaven/nodemaven-mcp)
+0.2.3 with `uvx nodemaven-mcp==0.2.3`, so [uv](https://docs.astral.sh/uv/) has to be
+installed, and asks for the dashboard API key when it is enabled. Its read tools are
+`proxy_url`, `check_proxy`, `test_proxy_on_site`, `list_locations`, `account_status`,
+`traffic_stats`, `top_domains`, `list_sub_users` and `list_whitelist_ips`. Its tools that
+change sub-users and whitelisted IPs stay off: the plugin does not set
+`NODEMAVEN_MCP_ALLOW_WRITE`. Proxy passwords are kept out of tool results.
 
 ## Evals
 

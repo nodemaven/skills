@@ -2,5 +2,3 @@ evals/results/
 **/evals/results/
 .env
 __pycache__/
-# The locked environment uv run creates inside the plugin.
-plugins/nodemaven/.venv/

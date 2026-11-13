@@ -1,0 +1,20 @@
+{
+  "name": "nodemaven-mcp",
+  "displayName": "NodeMaven MCP",
+  "version": "0.1.5",
+  "description": "The read-only NodeMaven MCP server: geo-targeted proxy URLs, proxy checks and site tests, locations, traffic and statistics from the user's account.",
+  "author": {
+    "name": "NodeMaven",
+    "email": "alexandr.kazmin@nodemaven.com"
+  },
+  "homepage": "https://github.com/nodemaven/skills",
+  "repository": "https://github.com/nodemaven/skills",
+  "license": "MIT",
+  "keywords": [
+    "proxy",
+    "residential-proxy",
+    "mcp",
+    "geo-targeting"
+  ],
+  "logo": "assets/icon.png"
+}

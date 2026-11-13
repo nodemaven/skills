@@ -1,8 +1,8 @@
 # NodeMaven plugin for Claude
 
 Skills that teach Claude to work with [NodeMaven](https://nodemaven.com)
-residential proxies and the open-source tools around them, plus the read-only
-NodeMaven MCP server for account data.
+residential proxies and the open-source tools around them. The read-only NodeMaven MCP
+server for account data is a separate plugin, `nodemaven-mcp`, in the same marketplace.
 
 ## Install
 
@@ -36,31 +36,19 @@ in your project.
 
 ## MCP server
 
-The plugin starts [`nodemaven-mcp`](https://github.com/nodemaven/nodemaven-mcp)
-0.2.3, an open-source server published on PyPI, from the locked environment in this
-folder: `pyproject.toml` pins it and `uv.lock` holds the exact versions and hashes of it and
-everything it needs, and the plugin runs it with `uv run --locked`. It needs
-[uv](https://docs.astral.sh/uv/) on the machine and runs locally.
-
-Its read tools are `proxy_url`, `check_proxy`, `test_proxy_on_site`,
-`list_locations`, `account_status`, `traffic_stats`, `top_domains`,
-`list_sub_users` and `list_whitelist_ips`; the proxy tools take residential or
-mobile IPs. The server also has tools that create,
-change and delete sub-users and whitelisted IPs; they refuse to run unless
-`NODEMAVEN_MCP_ALLOW_WRITE=1` is set, and the plugin does not set it, so nothing in
-your account is created, changed or deleted.
+The NodeMaven MCP server is a separate plugin in this marketplace, `nodemaven-mcp`, so this
+one is skills only. It starts [`nodemaven-mcp`](https://github.com/nodemaven/nodemaven-mcp)
+0.2.3 with `uvx nodemaven-mcp==0.2.3`, so [uv](https://docs.astral.sh/uv/) has to be
+installed, and asks for the dashboard API key when it is enabled. Its read tools are
+`proxy_url`, `check_proxy`, `test_proxy_on_site`, `list_locations`, `account_status`,
+`traffic_stats`, `top_domains`, `list_sub_users` and `list_whitelist_ips`. Its tools that
+change sub-users and whitelisted IPs stay off: the plugin does not set
+`NODEMAVEN_MCP_ALLOW_WRITE`. Proxy passwords are kept out of tool results.
 
 ## Credentials and network access
 
-- **API key.** When the plugin is enabled, Claude asks for an optional NodeMaven
-  API key from the dashboard. It is stored as a sensitive value and passed only
-  to the MCP server, as `NODEMAVEN_APIKEY`. Without it the server still starts
-  and each tool reports that the key is missing; the skills work either way.
-- **What the MCP server contacts.** The account tools call the NodeMaven
-  dashboard API at `dashboard.nodemaven.com` with that key. `check_proxy` opens
-  one connection through the NodeMaven gateway `gate.nodemaven.com` to
-  `api.ipify.org`, to report the exit IP. Proxy passwords and the account email
-  are removed from every tool result.
+- **No credential is read by this plugin.** It ships skills only: no MCP server, no
+  scripts, no stored key.
 - **What the skills suggest.** Code examples read proxy credentials and the API
   key from environment variables (`NODEMAVEN_LOGIN`, `NODEMAVEN_PASSWORD`,
   `NODEMAVEN_APIKEY`) instead of writing them into source, and send them only to
