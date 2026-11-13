@@ -1,0 +1,15 @@
+{
+  "name": "nodemaven",
+  "displayName": "NodeMaven",
+  "version": "0.1.4",
+  "description": "Residential proxies for scraping and automation: proxy setup and geo-targeting, the Python, Rust and Go SDKs, the account API, Google SERP scraping with SERP Maven, proxy benchmarking and troubleshooting, plus a read-only MCP server for the account.",
+  "author": {
+    "name": "NodeMaven",
+    "email": "alexandr.kazmin@nodemaven.com"
+  },
+  "homepage": "https://github.com/nodemaven/skills",
+  "repository": "https://github.com/nodemaven/skills",
+  "license": "MIT",
+  "keywords": ["proxy", "residential-proxy", "web-scraping", "geo-targeting", "serp", "google-search", "mcp"],
+  "logo": "assets/icon.png"
+}

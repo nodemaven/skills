@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "nodemaven": {
+      "command": "uvx",
+      "args": ["nodemaven-mcp==0.2.3"],
+      "env": {
+        "NODEMAVEN_APIKEY": "${NODEMAVEN_APIKEY}"
+      }
+    }
+  }
+}

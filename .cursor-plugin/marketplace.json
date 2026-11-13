@@ -1,0 +1,18 @@
+{
+  "name": "nodemaven",
+  "owner": {
+    "name": "NodeMaven",
+    "email": "alexandr.kazmin@nodemaven.com"
+  },
+  "metadata": {
+    "description": "NodeMaven skills and MCP server: residential proxies, SDKs, account API, Google SERP scraping and proxy benchmarking.",
+    "version": "0.1.4"
+  },
+  "plugins": [
+    {
+      "name": "nodemaven",
+      "source": "./plugins/nodemaven",
+      "description": "Residential proxy setup, SDKs, account API, Google SERP scraping with SERP Maven, proxy benchmarking and troubleshooting, plus a read-only MCP server."
+    }
+  ]
+}

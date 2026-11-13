@@ -26,7 +26,7 @@ On earlier versions:
 | `nodemaven-proxy` | connect code to the NodeMaven gateway: username format, country, region, city and ISP targeting, sticky sessions, rotation, and setup for requests, httpx, aiohttp, curl, Node, Playwright, Puppeteer, Selenium and Scrapy |
 | `nodemaven-sdk` | write code with the official Python, Rust and Go SDKs: validated proxy URLs, session pools, connection checks and the account API client |
 | `nodemaven-account-api` | call the NodeMaven dashboard REST API: traffic, statistics, locations, sub-users and the IP whitelist, including the quirks generated clients get wrong |
-| `google-browser-scraper` | scrape Google search results to JSON with the open-source google-browser-scraper: CLI, Python, local HTTP API, MCP server or Docker |
+| `serpmaven` | scrape Google search results to JSON with the open-source SERP Maven: CLI, Python, local HTTP API, MCP server or Docker |
 | `proxy-benchmark` | measure and compare proxy providers and scraping browsers with the open-source proxy-benchmark harness |
 | `proxy-troubleshooting` | diagnose proxy failures: 407, 406, 410 and 500 answers, hangs, Playwright and Chrome proxy authentication, sticky sessions that change IP, and unexpected traffic from Chrome |
 
@@ -37,8 +37,10 @@ in your project.
 ## MCP server
 
 The plugin starts [`nodemaven-mcp`](https://github.com/nodemaven/nodemaven-mcp)
-0.2.2, an open-source server published on PyPI, with `uvx nodemaven-mcp==0.2.2`.
-It needs [uv](https://docs.astral.sh/uv/) on the machine and runs locally.
+0.2.3, an open-source server published on PyPI, from the locked environment in this
+folder: `pyproject.toml` pins it and `uv.lock` holds the exact versions and hashes of it and
+everything it needs, and the plugin runs it with `uv run --locked`. It needs
+[uv](https://docs.astral.sh/uv/) on the machine and runs locally.
 
 Its read tools are `proxy_url`, `check_proxy`, `test_proxy_on_site`,
 `list_locations`, `account_status`, `traffic_stats`, `top_domains`,
